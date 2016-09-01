@@ -1,0 +1,24 @@
+<h2><font color="green">{{"This is the content of the second routing file"}}</font color></h2>
+<br>
+<br>
+<ul>
+	<li ng-repeat="person in names">
+		<b>{{person.name | uppercase}} ----- {{person.city | lowercase}}</b>	
+	</li>
+</ul>
+<h3>New Customer Registration</h3>
+<form name="Customer">
+	Customer Name:
+	<br>
+	<input type="text" name="CustName" ng-model="custName.name"/>
+	<br>
+	<br>
+	Customer City:
+	<br>
+	<input type="text" name="CustCity" ng-model="custCity.city"/>
+	<br>
+	<br>
+	<button ng-click="addCustomer()">Add Customer</button>
+</form>
+
+<a href="#/">Home</a>

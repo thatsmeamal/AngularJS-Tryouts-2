@@ -1,0 +1,22 @@
+<html ng-app="sample">
+	<head>
+		<link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css" />
+		<script type="text/javascript" src="JS/angular.min.js"></script>
+		<script type="text/javascript" src="JS/start.js"></script>
+	</head>
+
+	<body ng-init="names = [{name: 'John Smith', city: 'Phoenix'}, {name: 'John Doe', city: 'Washington'}]">
+		<h1>
+			{{"Hello, Angular !!!"}}
+		</h1>
+		<br><br>
+		<ul>
+			Type a Name: <input type="text" ng-model="individual"/>{{individual}}
+			<br><br>
+			<li ng-repeat="person in names">
+				<b>{{person.name}} - {{person.city}}</b>	
+			</li>
+		</ul>
+
+	</body>
+</html>

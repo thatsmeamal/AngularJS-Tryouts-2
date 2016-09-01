@@ -1,0 +1,33 @@
+<html ng-app="sample">
+	<head>
+		<link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css" />
+		<script type="text/javascript" src="JS/angular.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+		<script type="text/javascript" src="JS/routes.js"></script>
+	</head>
+
+	<body>
+		<h1>
+			{{"Hello, Angular !!!"}}
+			<br>
+			<br>
+			{{"This is the section of main file"}}
+		</h1>
+
+		<div>
+			<div ng-view=""></div>
+                       
+                        <!--<div ng-view></div>-->     <!--Alternative way..this works too>
+		</div>
+		
+		<br><br>
+		</ul>
+	</body>
+</html>
+
+<!--
+For routing to work, the js file angular-route.js is required.
+
+Here, the content of the html files used in routing(RoutesFirst.html & RoutesSecond.html) appear in
+the div where 'ng-view' is mentioned.
+-->

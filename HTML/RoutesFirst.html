@@ -1,0 +1,15 @@
+<h2><font color="red">{{"This is the content of the first routing file"}}</font color></h2>
+
+<br>
+<br>
+Type a Name:
+<input type="text" ng-model="customer">{{customer}}
+<br>
+<br>
+<ul>
+	<li ng-repeat="person in names | filter:customer">
+		{{person.name | lowercase}} --- {{person.city | uppercase}}
+	</li>
+</ul>
+
+<a href="#/AddCustomer">Click to add New Customer</a>

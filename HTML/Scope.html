@@ -1,0 +1,31 @@
+<html ng-app="sample">
+	<head>
+		<link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css" />
+		<script type="text/javascript" src="JS/angular.min.js"></script>
+		<script type="text/javascript" src="JS/scope.js"></script>
+	</head>
+
+	<body ng-controller = "SampleController as sampleCtrl">
+		<h1>
+			{{"The array is retrieved using the scope variable of the controller"}}
+		</h1>
+		<br><br>
+		<ul>
+			Type a Name: <input type="text" ng-model="individual"/>{{individual}}
+			<br><br>
+			<li ng-repeat="person in names">
+				<b>{{person.name | uppercase}} ----- {{person.city | lowercase}}</b>	
+			</li>
+		</ul>
+
+	</body>
+</html>
+
+
+<!-- 
+See the start.js file.
+
+The array has been assigned to the 'names' variable using the $scope object of the controller.
+
+Hence, we are able to use the same 'names' variable her in the html.
+-->

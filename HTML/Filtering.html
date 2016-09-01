@@ -1,0 +1,35 @@
+<html ng-app="sample">
+	<head>
+		<link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css" />
+		<script type="text/javascript" src="JS/angular.min.js"></script>
+		<script type="text/javascript" src="JS/start.js"></script>
+	</head>
+
+	<body ng-init="names = [{name: 'John Smith', city: 'Phoenix'}, {name: 'John Doe', city: 'Washington'}, {name: 'Will Smith', city: 'Detroit'}, {name: 'Mark Dawn', city: 'New York'}]">
+		<h1>
+			{{"Filtering the list using the value of text box, ordered by city(descending)"}}
+		</h1>
+		<br><br>
+		<ul>
+			Type a Name: <input type="text" ng-model="individual"/>{{individual}}
+			<br><br>
+			<li ng-repeat="person in names | filter : individual | orderBy:'-city'">
+				<b>{{person.name | uppercase}} ----- {{person.city | lowercase}}</b>	
+			</li>
+		</ul>
+
+		<br><br>
+		<h1>
+			{{"Filtering the list using the value of text box, ordered by name(descending)"}}
+		</h1>
+		<br><br>
+		<ul>
+			Type a Name: <input type="text" ng-model="individual1"/>{{individual1}}
+			<br><br>
+			<li ng-repeat="person in names | filter : individual1 | orderBy:'-name'">
+				<b>{{person.name | uppercase}} ----- {{person.city | lowercase}}</b>	
+			</li>
+		</ul>
+
+	</body>
+</html>
